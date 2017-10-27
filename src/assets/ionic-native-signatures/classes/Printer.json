@@ -1,0 +1,41 @@
+{
+  "name": "Printer",
+  "members": [
+    {
+      "name": "isAvailable",
+      "description": "Checks whether to device is capable of printing.",
+      "params": [
+      ]
+    },
+    {
+      "name": "check",
+      "description": "Checks if the printer service is available (iOS) or if printer services are installed and enabled (Android).",
+      "params": [
+      ]
+    },
+    {
+      "name": "pick",
+      "description": "Displays a system interface allowing the user to select an available printer. To speak with a printer directly you need to know the network address by picking them before via `printer.pick`.",
+      "params": [
+      ]
+    },
+    {
+      "name": "print",
+      "description": "Sends content to the printer.",
+      "params": [
+        {
+          "name": "content",
+          "description": "The content to print. Can be a URL or an HTML string. If a HTML DOM Object is provided, its innerHtml property value will be used.",
+          "type": "string",
+          "optional": false
+        },
+        {
+          "name": "options",
+          "description": "optional. The options to pass to the printer",
+          "type": "PrintOptions",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

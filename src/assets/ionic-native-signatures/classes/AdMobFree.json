@@ -1,0 +1,41 @@
+{
+  "name": "AdMobFree",
+  "members": [
+    {
+      "name": "events",
+      "description": "Convenience object to get event names",
+      "params": [
+      ]
+    },
+    {
+      "name": "on",
+      "description": "Watch an event",
+      "params": [
+        {
+          "name": "event",
+          "description": "event name",
+          "type": "string",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "description": "Returns the AdMobFreeBanner object",
+      "params": [
+      ]
+    },
+    {
+      "name": "interstitial",
+      "description": "Returns the AdMobFreeInterstitial object",
+      "params": [
+      ]
+    },
+    {
+      "name": "rewardVideo",
+      "description": "Returns the AdMobFreeRewardVideo object",
+      "params": [
+      ]
+    }
+  ]
+}

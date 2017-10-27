@@ -1,0 +1,23 @@
+{
+  "name": "Push",
+  "members": [
+    {
+      "name": "init",
+      "description": "Init push notifications",
+      "params": [
+        {
+          "name": "options",
+          "description": "",
+          "type": "PushOptions",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "hasPermission",
+      "description": "Check whether the push notification permission has been granted.",
+      "params": [
+      ]
+    }
+  ]
+}

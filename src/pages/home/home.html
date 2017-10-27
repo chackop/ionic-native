@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Ionic Native Playground
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let plugin of plugins" [navPush]="plugin.component" [navParams]="plugin.params">
+      {{plugin.name}}
+    </button>
+  </ion-list>
+</ion-content>

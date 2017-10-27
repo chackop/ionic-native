@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <ion-buttons start>
+      <button ion-button (click)="cancel()">Cancel</button>
+    </ion-buttons>
+    <ion-title>Plugin Params</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="save()">Save</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding *ngIf="!signature">
+    <button ion-button align-self-center block large (click)="addItem()">
+      Add param
+    </button>
+  </div>
+
+  <ion-list>
+    <ion-list-header color="light">Params</ion-list-header>
+    <ion-item-group [reorder]="!signature" (ionItemReorder)="reorderItems($event)">
+      <ion-item *ngFor="let item of items; let i = index" >
+        <ion-label *ngIf="!!signature">
+          <h2>{{ item.name }}</h2>
+          <small *ngIf="item.optional">(optional)</small>
+        </ion-label>
+        <ion-input *ngIf="['string', 'number'].indexOf(item.type) > -1" [type]="item.type" [(ngModel)]="values[i]"></ion-input>
+        <ion-toggle *ngIf="item.type === 'boolean'" [(ngModel)]="values[i]"></ion-toggle>
+        <ion-textarea *ngIf="['object', 'array'].indexOf(item.type) > -1" [value]="values[i] | stringify" disabled></ion-textarea>
+        <ion-datetime *ngIf="item.type === 'date'" displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="values[i]"></ion-datetime>
+        <button ion-button icon-only clear item-end *ngIf="['object', 'array'].indexOf(item.type) > -1" (click)="editObject(i)">
+          <ion-icon name="create"></ion-icon>
+        </button>
+        <button ion-button icon-only clear item-end (click)="changeType(i)">
+          <ion-icon name="build"></ion-icon>
+        </button>
+        <button ion-button icon-only clear color="danger" item-end (click)="removeItem(i)">
+          <ion-icon name="remove-circle"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="showHelp()" class="help-button">
+      <ion-icon name="help"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

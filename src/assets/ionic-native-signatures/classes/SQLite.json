@@ -1,0 +1,35 @@
+{
+  "name": "SQLite",
+  "members": [
+    {
+      "name": "create",
+      "description": "Open or create a SQLite database file.See the plugin docs for an explanation of all options: https://github.com/litehelpers/Cordova-sqlite-storage#opening-a-database",
+      "params": [
+        {
+          "name": "config",
+          "description": "database configuration",
+          "type": "SQLiteDatabaseConfig",
+          "optional": false
+        }
+      ]
+    },
+    {
+      "name": "echoTest",
+      "description": "Verify that both the Javascript and native part of this plugin are installed in your application",
+      "params": [
+      ]
+    },
+    {
+      "name": "deleteDatabase",
+      "description": "Deletes a database",
+      "params": [
+        {
+          "name": "config",
+          "description": "database configuration",
+          "type": "SQLiteDatabaseConfig",
+          "optional": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "DirectoryReader",
+  "parent": "File",
+  "properties": [
+    {
+      "name": "localURL",
+      "description": "",
+      "type": "string",
+      "optional":false
+    },
+    {
+      "name": "hasReadEntries",
+      "description": "",
+      "type": "boolean",
+      "optional":false
+    },
+    {
+      "name": "readEntries",
+      "description": "Read the next block of entries from this directory.",
+      "type": "void",
+      "optional":false
+    }
+  ]
+}

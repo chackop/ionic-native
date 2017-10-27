@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <plugin-result [result]="result" [error]="error"></plugin-result>
+
+  <div padding>
+    <button ion-button large outline block (click)="takePicture()">Take picture</button>
+  </div>
+
+  <plugin-config name="Camera config" [(config)]="config"></plugin-config>
+
+</ion-content>

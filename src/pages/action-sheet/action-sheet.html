@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Action Sheet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <plugin-result [result]="result" [error]="error"></plugin-result>
+  <p>
+    Click the button below to display a native action sheet. The plugin will then return back the index of the button that you clicked on.
+  </p>
+  <button ion-button mode="ios" large round block (click)="showActionSheet()">Show Action Sheet</button>
+</ion-content>
